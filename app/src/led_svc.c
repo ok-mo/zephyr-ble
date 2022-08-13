@@ -27,7 +27,7 @@ void led_update(void)
 	}
 
 	led_state = !led_state;
-	LOG_INF("Turn %s LED", led_state ? "on" : "off");
+	LOG_INF("%slock car", led_state ? "" : "un");
 	gpio_pin_set(led.port, led.pin, led_state);
 }
 
